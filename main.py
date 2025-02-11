@@ -3,6 +3,8 @@ from scipy.io import loadmat
 from pathlib import Path
 import json
 
+from Processing.utils.NumpyEncoder import NumpyEncoder
+
 
 def main():
     # Load configuration
@@ -83,13 +85,17 @@ def main():
     # Save results
     Path('results').mkdir(exist_ok=True)
     with open('results/analysis_results.json', 'w') as f:
-        json.dump(results, f)
+        json.dump(results, f, cls=NumpyEncoder)
 
     print("Processing complete. Results saved to 'results/analysis_results.json'")
 
 
 def plot_beat_analysis(beat, delineation, qrs_recon, t_recon, p_recon, fs, beat_num):
     """Plot original beat with delineation and reconstructed waves"""
+    # Create results directory if it doesn't exist
+    import os
+    os.makedirs('results', exist_ok=True)
+
     t = np.arange(len(beat)) / fs
 
     plt.figure(figsize=(15, 10))

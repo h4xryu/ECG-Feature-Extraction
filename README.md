@@ -1,7 +1,7 @@
 # ECG Wave Delineation and Feature Extraction
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ECG wave delineation and feature extraction system implementation, focusing on accurate detection of P, QRS, and T waves using optimized signal processing techniques.
 

@@ -70,6 +70,3 @@ coeffs, opt_pars = processor.extract_features(test_beats)
    - Temporal features
    - Signal quality metrics
 
-## License
-
-[MIT License](LICENSE)
